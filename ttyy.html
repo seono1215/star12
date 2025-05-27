@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 홈페이지</title>
+    <link rel="stylesheet" href="soo.css">
+</head>
+<body>
+
+<header>
+    <h1>이푸른별 홈페이지💎</h1>
+    <div class="hamburger" onclick="showComingSoon()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showContent('home')">홈</button>
+    <button onclick="showContent('resume')">이력 소개</button>
+    <button onclick="showContent('portfolio')">포트폴리오</button>
+    <button onclick="showContent('contact')">연락처</button>
+</nav>
+
+<body>
+
+</body>
+
+<div id="home" class="content active">
+    <h2>🏠 홈!</h2>
+    <p>여기는 홈페이지 메인 화면입니다!</p>
+</div>
+
+
+
+<div id="resume" class="content">
+    <h2>이력 소개</h2>
+
+    <h3>🎓 학력</h3>
+    <p>서울대학교 갈 뻔했지만, 아쉽게도 <strong>두원공과대학교</strong>를 졸업했습니다.</p>
+
+    <h3>🛠 기술 수준</h3>
+    <table style="margin: 0 auto; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #e0f0ff;">
+                <th style="border: 1px solid #999; padding: 8px;">기술</th>
+                <th style="border: 1px solid #999; padding: 8px;">수준</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #999; padding: 8px;">HTML</td>
+                <td style="border: 1px solid #999; padding: 8px;">하</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #999; padding: 8px;">CSS</td>
+                <td style="border: 1px solid #999; padding: 8px;">하</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #999; padding: 8px;">JavaScript</td>
+                <td style="border: 1px solid #999; padding: 8px;">하</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="portfolio" class="content">
+    <h2>포트폴리오</h2>
+    <p>아직 없어여</p>
+</div>
+
+<div id="contact" class="content">
+    <h2>📙 연락처</h2>
+    <p>이메일: 없어여</p>
+</div>
+
+<footer>
+    🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊🦊
+</footer>
+
+
+<script>
+    function showContent(id) {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(c => c.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+
+    function showComingSoon() {
+        alert("아직 준비중입니다.");
+    }
+</script>
+
+</body>
+</html>
